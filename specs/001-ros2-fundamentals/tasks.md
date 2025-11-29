@@ -10,7 +10,7 @@
 - [x] T002 Navigate into project directory with command: `cd physical-ai-book`
 - [x] T003 Install dependencies with command: `npm install`
 - [x] T004 Start development server to verify setup with command: `npm start`
-- [ ] T005 Create Module 1 folder structure with command: `mkdir docs/module-1-ros2-fundamentals`
+- [x] T005 Create Module 1 folder structure with command: `mkdir docs/module-1-ros2-fundamentals`
 - [ ] T006 Configure sidebar navigation for Module 1 in `sidebars.ts`
 
 ---
