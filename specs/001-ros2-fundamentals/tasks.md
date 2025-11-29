@@ -7,7 +7,7 @@
 **Purpose**: Project initialization and basic structure for the Docusaurus site.
 
 - [x] T001 Initialize Docusaurus project with command: `npx create-docusaurus@latest physical-ai-book classic --typescript`
-- [ ] T002 Navigate into project directory with command: `cd physical-ai-book`
+- [x] T002 Navigate into project directory with command: `cd physical-ai-book`
 - [ ] T003 Install dependencies with command: `npm install`
 - [ ] T004 Start development server to verify setup with command: `npm start`
 - [ ] T005 Create Module 1 folder structure with command: `mkdir docs/module-1-ros2-fundamentals`
