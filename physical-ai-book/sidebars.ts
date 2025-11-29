@@ -30,6 +30,16 @@ const sidebars: SidebarsConfig = {
         'module-1-ros2-fundamentals/exercise',
       ],
     },
+    {
+      type: 'category',
+      label: 'Module 2: Gazebo & Unity',
+      items: [
+        'module-2-gazebo-unity/intro',
+        'module-2-gazebo-unity/gazebo-basics',
+        'module-2-gazebo-unity/sensors',
+        'module-2-gazebo-unity/unity-integration',
+      ],
+    },
   ],
    
 };
