@@ -40,6 +40,16 @@ const sidebars: SidebarsConfig = {
         'module-2-gazebo-unity/unity-integration',
       ],
     },
+    {
+      type: 'category',
+      label: 'Module 3: NVIDIA Isaac',
+      items: [
+        'module-3-isaac/intro',
+        'module-3-isaac/isaac-sim',
+        'module-3-isaac/isaac-ros',
+        'module-3-isaac/navigation',
+      ],
+    },
   ],
    
 };

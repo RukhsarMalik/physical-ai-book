@@ -6,8 +6,8 @@
 ## Phase 1: Setup (Shared Infrastructure)
 **Purpose**: Project initialization and basic structure for the Docusaurus site.
 
-- [ ] T001 Create Module 3 folder structure with command: `mkdir -p docs/module-3-nvidia-isaac`
-- [ ] T002 Update sidebar navigation for Module 3 in `sidebars.ts` with the new content pages.
+- [x] T001 Create Module 3 folder structure with command: `mkdir -p docs/module-3-isaac`
+- [x] T002 Update sidebar navigation for Module 3 in `sidebars.ts` with the new content pages.
 
 ---
 
@@ -20,7 +20,7 @@
 **Goal**: Create the introductory content for the NVIDIA Isaac ecosystem.
 **Independent Test**: The `intro.md` page renders correctly on the Docusaurus site with the specified content.
 
-- [ ] T003 [US1] Create and write content for `docs/module-3-nvidia-isaac/intro.md` covering Isaac platform overview (~300 words).
+- [x] T003 [US1] Create and write content for `docs/module-3-nvidia-isaac/intro.md` covering Isaac platform overview (~300 words).
 
 ---
 
@@ -28,7 +28,7 @@
 **Goal**: Create content explaining Isaac Sim for photorealistic simulation and synthetic data.
 **Independent Test**: The `isaac-sim.md` page renders correctly with all specified sections and explanations.
 
-- [ ] T004 [US2] Create and write content for `docs/module-3-nvidia-isaac/isaac-sim.md` detailing Isaac Sim and synthetic data (~400 words).
+- [x] T004 [US2] Create and write content for `docs/module-3-nvidia-isaac/isaac-sim.md` detailing Isaac Sim and synthetic data (~400 words).
 
 ---
 
@@ -36,7 +36,7 @@
 **Goal**: Create content explaining Isaac ROS for hardware acceleration and VSLAM.
 **Independent Test**: The `isaac-ros.md` page renders correctly with all specified sections and explanations.
 
-- [ ] T005 [US3] Create and write content for `docs/module-3-nvidia-isaac/isaac-ros.md` explaining Isaac ROS and VSLAM (~400 words).
+- [x] T005 [US3] Create and write content for `docs/module-3-nvidia-isaac/isaac-ros.md` explaining Isaac ROS and VSLAM (~400 words).
 
 ---
 
@@ -44,7 +44,7 @@
 **Goal**: Create content explaining Nav2 path planning for navigation.
 **Independent Test**: The `navigation.md` page renders correctly with all specified sections and explanations.
 
-- [ ] T006 [US4] Create and write content for `docs/module-3-nvidia-isaac/navigation.md` covering Nav2 path planning (~300 words).
+- [x] T006 [US4] Create and write content for `docs/module-3-nvidia-isaac/navigation.md` covering Nav2 path planning (~300 words).
 
 ---
 
