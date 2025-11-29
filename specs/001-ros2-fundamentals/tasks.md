@@ -49,7 +49,7 @@
 **Goal**: Create the URDF format explanation page.
 **Independent Test**: The `urdf.md` page renders correctly with the URDF structure and examples.
 
-- [ ] T011 [US4] Create and write content for `docs/module-1-ros2-fundamentals/urdf.md` explaining URDF structure, links, and joints.
+- [x] T011 [US4] Create and write content for `docs/module-1-ros2-fundamentals/urdf.md` explaining URDF structure, links, and joints.
 
 ---
 
