@@ -33,7 +33,7 @@
 **Independent Test**: The `concepts.md` page renders correctly with all specified sections and diagrams.
 
 - [x] T008 [US2] Create and write content for `docs/module-1-ros2-fundamentals/concepts.md` covering Nodes, Topics, Services, and Actions.
-- [ ] T009 [P] [US2] Create and embed architecture diagrams in `docs/module-1-ros2-fundamentals/concepts.md`.
+- [x] T009 [P] [US2] Create and embed architecture diagrams in `docs/module-1-ros2-fundamentals/concepts.md`.
 
 ---
 
