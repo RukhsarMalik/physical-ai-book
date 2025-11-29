@@ -1,55 +1,82 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+---
+Sync Impact Report
+---
+Version change: 0.0.0 → 1.0.0
+Modified principles:
+- Principle 1: "PRINCIPLE_1_NAME" → "I. Production-Ready Code"
+- Principle 2: "PRINCIPLE_2_NAME" → "II. TypeScript Type Safety"
+- Principle 3: "PRINCIPLE_3_NAME" → "III. Mobile-Responsive Design"
+- Principle 4: "PRINCIPLE_4_NAME" → "IV. Clear Documentation"
+- Principle 5: "PRINCIPLE_5_NAME" → "V. Modular & Reusable Components"
+Added sections:
+- Principle 6: "VI. RESTful API Design"
+- Principle 7: "VII. Secure Environment Management"
+- "Technology Stack"
+- "Project Deliverables & Constraints"
+- "Optional Bonus Features"
+Templates requiring updates:
+- ✅ .specify/templates/plan-template.md
+- ✅ .specify/templates/spec-template.md
+- ✅ .specify/templates/tasks-template.md
+Follow-up TODOs: None
+-->
+
+# Physical AI & Humanoid Robotics Textbook Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Production-Ready Code
+All code must be production-ready with proper error handling.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. TypeScript Type Safety
+Utilize TypeScript for strict type safety on the frontend to minimize runtime errors.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Mobile-Responsive Design
+All frontend components and pages must be fully responsive and functional on mobile devices.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Clear Documentation
+Document all code, especially complex logic and public APIs, and maintain clear, in-code comments where necessary.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Modular & Reusable Components
+Design components and modules to be reusable and independent to promote a scalable and maintainable codebase.
 
-### [PRINCIPLE_6_NAME]
+### VI. RESTful API Design
+Adhere to RESTful principles for all API endpoints, ensuring predictable and standardized communication.
 
+### VII. Secure Environment Management
+Manage all secrets and environment variables securely, ensuring they are never hardcoded or committed to version control.
 
-[PRINCIPLE__DESCRIPTION]
+## Technology Stack
+- **Frontend**: Docusaurus with React and TypeScript
+- **Backend**: FastAPI with Python
+- **Database**: Neon Serverless Postgres
+- **Vector Database**: Qdrant Cloud (free tier)
+- **AI**: OpenAI SDK (GPT-4 and Embeddings API)
+- **Deployment**: GitHub Pages (frontend) and Railway/Vercel (backend)
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Project Deliverables & Constraints
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### Deliverables
+1. Complete Docusaurus book with 4 modules (ROS 2, Gazebo/Unity, NVIDIA Isaac, VLA).
+2. RAG chatbot that answers questions from book content.
+3. Text selection feature for contextual queries.
+4. Deployed and working production site.
+5. 90-second demo video.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### Constraints
+- Deadline: Tonight 6 PM.
+- Must be deployable to GitHub Pages.
+- All APIs must be secure and rate-limited.
+- Code must follow best practices.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Optional Bonus Features
+- Authentication with better-auth.com
+- Content personalization
+- Urdu translation
+- Claude Code subagents
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution is the single source of truth for project standards. All development and review processes must adhere to these principles. Amendments require team consensus and documentation.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-11-29 | **Last Amended**: 2025-11-29
