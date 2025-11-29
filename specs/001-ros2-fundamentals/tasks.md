@@ -24,7 +24,7 @@
 **Goal**: Create the introductory content for ROS 2.
 **Independent Test**: The `intro.md` page renders correctly on the Docusaurus site with the specified content.
 
-- [ ] T007 [US1] Create and write content for `docs/module-1-ros2-fundamentals/intro.md` covering ROS 2 introduction, history, and applications.
+- [x] T007 [US1] Create and write content for `docs/module-1-ros2-fundamentals/intro.md` covering ROS 2 introduction, history, and applications.
 
 ---
 
