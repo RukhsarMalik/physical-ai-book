@@ -57,7 +57,7 @@
 **Goal**: Create the hands-on tutorial for building a ROS 2 package.
 **Independent Test**: A user can follow the tutorial in `exercise.md` to successfully build and run a ROS 2 package.
 
-- [ ] T012 [US5] Create and write content for `docs/module-1-ros2-fundamentals/exercise.md` with a full tutorial on creating a ROS 2 package.
+- [x] T012 [US5] Create and write content for `docs/module-1-ros2-fundamentals/exercise.md` with a full tutorial on creating a ROS 2 package.
 
 ---
 
