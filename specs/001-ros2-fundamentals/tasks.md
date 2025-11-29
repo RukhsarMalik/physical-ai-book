@@ -41,7 +41,7 @@
 **Goal**: Create the Python integration guide with code examples.
 **Independent Test**: The `python-integration.md` page renders correctly, and all code examples are runnable.
 
-- [ ] T010 [US3] Create and write content for `docs/module-1-ros2-fundamentals/python-integration.md` covering `rclpy` setup and publisher/subscriber examples.
+- [x] T010 [US3] Create and write content for `docs/module-1-ros2-fundamentals/python-integration.md` covering `rclpy` setup and publisher/subscriber examples.
 
 ---
 
