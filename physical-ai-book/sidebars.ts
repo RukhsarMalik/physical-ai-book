@@ -50,6 +50,16 @@ const sidebars: SidebarsConfig = {
         'module-3-isaac/navigation',
       ],
     },
+    {
+      type: 'category',
+      label: 'Module 4: Vision-Language-Action',
+      items: [
+        'module-4-vla/intro',
+        'module-4-vla/voice-to-action',
+        'module-4-vla/cognitive-planning',
+        'module-4-vla/capstone-project',
+      ],
+    },
   ],
    
 };
