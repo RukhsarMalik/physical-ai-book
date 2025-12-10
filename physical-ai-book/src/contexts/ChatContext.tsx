@@ -10,6 +10,7 @@ import React, {
   ReactNode,
 } from "react";
 import axios, { AxiosInstance } from "axios";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 export type Message = {
   id: string;
@@ -40,11 +41,14 @@ export type ChatContextType = {
 const ChatContext = createContext<ChatContextType | undefined>(undefined);
 
 export const ChatProvider = ({ children }: { children: ReactNode }) => {
+  // ⭐ Load backend API URL from Docusaurus config (correct way)
+  const { siteConfig } = useDocusaurusContext();
   const backendApiUrl =
-    (typeof window !== "undefined" &&
-      (window as any)?.docusaurusConfig?.customFields?.backendApiUrl) ||
-    "http://localhost:8000";
+    (siteConfig?.customFields?.backendApiUrl as string) || "http://localhost:8000";
 
+  console.log("Backend API URL Loaded:", backendApiUrl);
+
+  // Axios client
   const api = axios.create({
     baseURL: backendApiUrl,
     headers: { "Content-Type": "application/json" },
@@ -159,31 +163,25 @@ export const ChatProvider = ({ children }: { children: ReactNode }) => {
     async (text: string) => {
       if (!text) return;
 
-      // 1️⃣ Show selected text in chat
       addMessage({
         role: "user",
         content: `📌 Selected Text:\n\`\`\`\n${text}\n\`\`\``,
       });
 
-
-      // 2️⃣ Show auto-question
       addMessage({
         role: "user",
         content: "Explain this part.",
       });
 
-      // 3️⃣ Message for backend (correct triple-quote format)
       const formattedMessage = `SELECTED_TEXT:
 """${text}"""
 
 Explain this part.`;
 
-
       setAgentThinking(true);
       addMessage({ role: "assistant", content: "", isStreaming: true });
 
       try {
-        console.log({ formattedMessage }); // Debugging: log the formatted message
         const res = await api.post("/api/chat", {
           message: formattedMessage,
           session_id: sessionId,
@@ -202,8 +200,7 @@ Explain this part.`;
 
         addMessage({
           role: "assistant",
-          content:
-            "Sorry, I couldn’t process that selected text. Try again!",
+          content: "Sorry, I couldn’t process that selected text. Try again!",
         });
       } finally {
         setAgentThinking(false);
