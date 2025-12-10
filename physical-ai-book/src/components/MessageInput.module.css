@@ -1,0 +1,70 @@
+.messageInputContainer {
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  background-color: var(--ifm-card-background-color);
+  gap: 10px;
+}
+
+.messageInput {
+  flex-grow: 1;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 24px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: none;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  transition: all 0.2s ease-in-out;
+  max-height: 150px;
+}
+
+.messageInput:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(var(--ifm-color-primary-rgb), 0.15);
+  outline: none;
+}
+
+.messageInput::placeholder {
+  color: var(--ifm-font-color-secondary);
+}
+
+.messageInput:disabled {
+  background-color: var(--ifm-color-emphasis-200);
+  cursor: not-allowed;
+}
+
+.sendButton {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sendButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+.sendButton:hover:not(:disabled) {
+  background-color: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sendButton:disabled {
+  background-color: var(--ifm-color-emphasis-300);
+  cursor: not-allowed;
+  transform: scale(0.95);
+}

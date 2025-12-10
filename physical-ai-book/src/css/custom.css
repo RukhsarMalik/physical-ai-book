@@ -1,0 +1,53 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Custom styles for the hero section gradient background */
+.hero--gradient-background {
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  /* You can adjust the colors as needed */
+  background-size: cover;
+  background-position: center;
+  color: white; /* Ensure text is readable on the dark gradient */
+}
+
+.hero--gradient-background .hero__title,
+.hero--gradient-background .hero__subtitle,
+.hero--gradient-background .heroDescription {
+  color: white;
+}
+
+.hero--gradient-background .button--secondary {
+  --ifm-button-color: white;
+  --ifm-button-background-color: #00bf72; /* A color from the gradient */
+  --ifm-button-hover-background-color: #a8eb12;
+  --ifm-button-hover-color: black;
+  border: none;
+}

@@ -1,0 +1,26 @@
+.selectionTooltip {
+  position: absolute;
+  background-color: var(--ifm-color-emphasis-800);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  z-index: 2000; /* Above chat window */
+  transform: translateX(-50%); /* Center horizontally */
+  pointer-events: all; /* Ensure it's clickable */
+  user-select: none; /* Prevent tooltip text from being re-selected */
+}
+
+.selectionTooltip button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+}
+
+.selectionTooltip button:hover {
+  text-decoration: underline;
+}

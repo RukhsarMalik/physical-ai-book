@@ -1,0 +1,14 @@
+fastapi==0.115.3
+uvicorn[standard]==0.38.0
+openai
+qdrant-client==1.7.3
+
+python-dotenv==1.0.0
+pydantic
+sqlalchemy==2.0.23
+langchain-text-splitters
+httpx==0.28.1
+openai-agents==0.6.2
+
+psycopg2-binary
+gunicorn # Added for production deployment

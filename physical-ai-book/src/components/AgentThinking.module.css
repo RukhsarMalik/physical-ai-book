@@ -1,0 +1,66 @@
+.agentThinkingContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--ifm-background-surface-color);
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: fit-content;
+  margin: 10px 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.thinkingMessage {
+  margin: 0;
+  color: var(--ifm-font-color-base);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Dot Pulse Animation */
+.dotPulse {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  animation: dotPulse 1.5s infinite linear;
+  animation-delay: 0.25s;
+}
+
+.dotPulse::before,
+.dotPulse::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  animation: dotPulse 1.5s infinite linear;
+}
+
+.dotPulse::before {
+  left: -15px;
+  animation-delay: 0s;
+}
+
+.dotPulse::after {
+  right: -15px;
+  animation-delay: 0.5s;
+}
+
+@keyframes dotPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
