@@ -41,10 +41,12 @@ export type ChatContextType = {
 const ChatContext = createContext<ChatContextType | undefined>(undefined);
 
 export const ChatProvider = ({ children }: { children: ReactNode }) => {
-  // ⭐ Load backend API URL from Docusaurus config (correct way)
-  const { siteConfig } = useDocusaurusContext();
+
+  // ⭐ SSR-SAFE FIX — DO NOT CHANGE
+  const context = useDocusaurusContext();
   const backendApiUrl =
-    (siteConfig?.customFields?.backendApiUrl as string) || "http://localhost:8000";
+    (context?.siteConfig?.customFields?.backendApiUrl as string) ||
+    "http://localhost:8000";
 
   console.log("Backend API URL Loaded:", backendApiUrl);
 
@@ -61,9 +63,7 @@ export const ChatProvider = ({ children }: { children: ReactNode }) => {
   const [selectedText, setSelectedText] = useState<string | null>(null);
   const welcomeMessageAddedRef = useRef(false);
 
-  // -------------------------------
   // ADD MESSAGE
-  // -------------------------------
   const addMessage = useCallback((msg: Omit<Message, "id">) => {
     setMessages((prev) => [
       ...prev,
@@ -71,9 +71,7 @@ export const ChatProvider = ({ children }: { children: ReactNode }) => {
     ]);
   }, []);
 
-  // -------------------------------
   // REMOVE LAST ASSISTANT MESSAGE
-  // -------------------------------
   const removeLastAssistantMessage = useCallback(() => {
     setMessages((prev) => {
       const last = prev[prev.length - 1];
@@ -82,9 +80,7 @@ export const ChatProvider = ({ children }: { children: ReactNode }) => {
     });
   }, []);
 
-  // -------------------------------
   // UPDATE LAST ASSISTANT MESSAGE
-  // -------------------------------
   const updateLastAssistantMessage = useCallback(
     (newContent: string, newSources?: string[]) => {
       setMessages((prev) =>
@@ -103,9 +99,7 @@ export const ChatProvider = ({ children }: { children: ReactNode }) => {
     []
   );
 
-  // -------------------------------
   // WELCOME MESSAGE
-  // -------------------------------
   useEffect(() => {
     if (!welcomeMessageAddedRef.current && messages.length === 0) {
       addMessage({
@@ -118,9 +112,7 @@ export const ChatProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [messages.length, addMessage]);
 
-  // -------------------------------
   // NORMAL CHAT MESSAGE
-  // -------------------------------
   const sendChatMessage = useCallback(
     async (message: string) => {
       addMessage({ role: "user", content: message });
@@ -156,9 +148,7 @@ export const ChatProvider = ({ children }: { children: ReactNode }) => {
     [addMessage, api, sessionId, updateLastAssistantMessage, removeLastAssistantMessage, setSessionId]
   );
 
-  // -------------------------------
-  // SELECTION MESSAGE — AUTO SEND
-  // -------------------------------
+  // SELECTION MESSAGE
   const sendSelectionMessage = useCallback(
     async (text: string) => {
       if (!text) return;
@@ -200,7 +190,8 @@ Explain this part.`;
 
         addMessage({
           role: "assistant",
-          content: "Sorry, I couldn’t process that selected text. Try again!",
+          content:
+            "Sorry, I couldn’t process that selected text. Try again!",
         });
       } finally {
         setAgentThinking(false);
