@@ -19,8 +19,14 @@ app = FastAPI(
 allowed_origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+
+    # HuggingFace backend domain:
     "https://rukhsarmalik-physical-book.hf.space",
+
+    # Vercel frontend domain:
+    "https://physical-ai-book-zeta.vercel.app",
 ]
+
 
 app.add_middleware(
     CORSMiddleware,
